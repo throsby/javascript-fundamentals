@@ -1,0 +1,17 @@
+const greet = () => {
+    console.log("Hello world")
+}
+
+greet()
+
+const square = (num) => {
+    return num * num
+}
+
+square(6)
+
+const greetByName = (name) => {
+    console.log("Hello", name)
+}
+
+greetByName("Throsby")

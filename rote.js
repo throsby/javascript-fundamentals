@@ -1,18 +1,17 @@
-const greet = () => {
-    console.log("Hello world")
-}
+// const greet = () => {
+//     console.log("Hello world")
+// }
 
-greet()
+// greet()
 
-const square = (number) => {
-    return number * number
-}
+// const square = (num) => {
+//     return num * num
+// }
 
-square(25)
+// square(77)
 
-const greetByName = (str) => {
-    console.log("Hello,", str)
-}
+// const greetByName = (asdf) => {
+//     console.log("Hello", asdf)
+// }
 
-greetByName("Throsby")
-
+// greetByName("Throsby")
