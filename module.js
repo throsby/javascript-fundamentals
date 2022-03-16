@@ -44,9 +44,9 @@ const functionC = () => {
     console.log("FUNCTIONC HAS BEEN CALLED!")
 }
 
-const greet = (person) => {
-    console.log("HELLO", person)
-}
+// const greet = (person) => {
+//     console.log("HELLO", person)
+// }
 
 const blender = (string) => {
     return string.split('')
