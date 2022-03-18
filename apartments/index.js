@@ -50,6 +50,7 @@ let tenant2 = {
     creditScore: 800,
     salary: 95000,
     age: 30,
+    pet: "Fido"
 }
 
 let building = {
@@ -57,9 +58,35 @@ let building = {
     laundry: false,
     allowsPets: false,
     apartments: [apt1, apt2, apt3],
-    lease: function (apt=}, tenant) {
-        if (apt.tenants.length === apt.bedrooms) return `${apt.unit} is already full!`;
-        apt.tenants.push(tenant);
-        console.log(tenant.name, "has rented out", apt.unit);  
+    lease: function (apt, tenant) {
+        if (apt.tenants.length === apt.bedrooms) {
+            return `${apt.unit} is already full!`;
+        }
+        if (this.allowsPets === false && tenant.pet) {
+            return `${apt.unit} is available, but you'll have to put ${tenant.pet} up for adoption`
+        }
+        let t = apt.tenants.push(tenant);   
+        console.log(tenant.name, "has rented out", apt.unit);
+        return t;
+    },
+    occupiedApts: function() {
+        // returns only the apts that have tenants within the tenants array
+        // condition to test: apt.tenants.length
+        return this.apartments.filter((apt) => {
+            return apt.tenants.length > 0;
+        })
+    },
+    fullApt: function () {
+      // returns only the apts that are completely full
+      // condition to test: apt.tenants.length === apt.bedrooms
+      return this.apartments.filter((apt) => {
+          return apt.tenants.length === apt.bedrooms;
+      })  
     },
 }
+
+
+// const openApartment = (apt) => {
+//     let apt = 
+//     return apt
+// }
