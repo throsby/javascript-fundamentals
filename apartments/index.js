@@ -85,8 +85,21 @@ let building = {
     },
 }
 
+const div = document.getElementById("building")
 
-// const openApartment = (apt) => {
-//     let apt = 
-//     return apt
-// }
+const render = () => {
+    let h2 = document.createElement('h2')
+    h2.innerText = building.streetAddress
+    div.append(h2)
+    let ul = document.createElement('ul')
+    building.apartments.forEach((element) => {
+        let li = document.createElement("li")
+        li.innerText = element.unit
+        ul.append(li)
+    })
+    div.append(ul)
+}
+
+render()
+
+

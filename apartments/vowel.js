@@ -11,6 +11,8 @@ const filteredResults = arr.filter( func )
 //     }        
 // }
 
+
+
 function func(word,index) {
     console.log('This is the index in the array of names that the filter function is operating on ', index)
 	return word.length <= 5
